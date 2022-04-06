@@ -1,0 +1,156 @@
+@media only screen and (min-width: 650px) {
+  html {
+    background-image: url("/phpmotors/images/site/checkerboard.jpg");
+    background-repeat: repeat;
+    z-index: -2;
+  }
+
+  body {
+    border: 3px solid var(--blue);
+    margin: 3% auto;
+    background-color: var(--white);
+    max-width: 980px;
+  }
+
+  .main-grid-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .main-grid-box>h2 {
+    grid-column: 1/3;
+  }
+
+  .main-grid-box>section {
+    grid-column: 1/3;
+    margin: 1rem;
+  }
+
+  article {
+    grid-column: 2/3;
+    grid-row: 3;
+    margin-left: 3rem;
+  }
+
+  aside {
+    grid-column: 1/2;
+    grid-row: 3;
+  }
+
+  aside,
+  article {
+    margin-top: 2rem;
+  }
+
+  .mainimgbox {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  button {
+    align-items: baseline;
+    margin: 1rem auto auto 0;
+  }
+
+  header h1 {
+    font-size: x-large;
+  }
+
+  nav {
+    font-size: medium;
+  }
+
+  nav ul {
+    list-style: none;
+    justify-content: flex-start;
+  }
+
+  nav li {
+    white-space: nowrap;
+    margin: auto 1rem;
+  }
+
+  /* *************Week 10 CSS code********* */
+  /* For vehicle display in classification view */
+  #inv-display {
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  #inv-display h2 {
+    font-size: 1rem;
+  }
+
+  #inv-display li {
+    max-width: 200px;
+    /* flex: 1 0 auto; */
+    text-align: center;
+    height: 250px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  #inv-display div {
+    width: 100%;
+  }
+
+  #detail-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    grid-column: 2;
+    grid-row: 1
+  }
+
+  #detail-display img {
+    max-width: 500px;
+  }
+
+  div.imageBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+  }
+
+  /* ************** Week 11 Vehicle Details Page*********** */
+  #image-display:before {
+    content: "";
+  }
+
+  #image-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 1;
+    grid-row: 1;
+    /* height: 300px; */
+    overflow: hidden;
+  }
+
+  .car-detail img {
+    width: 100%;
+    margin: 1rem 0;
+    transition: transform .5s ease;
+  }
+
+  .details-wrapper {
+    border: 1px #ccc solid;
+    display: grid;
+    grid-template-columns: 10% auto;
+    grid-template-rows: 1fr;
+    grid-gap: .5rem;
+  }
+
+  .car-detail li:hover img {
+    position: absolute;
+    z-index: 2;
+    width: 60%;
+    top: 30px;
+    left: 30px;
+   transform: scale(1.2);
+  }
+}
